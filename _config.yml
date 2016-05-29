@@ -37,7 +37,7 @@ owner:
   name:           袁英杰
   site:           http://godsme.github.io
   avatar:         images/avatar.jpg
-  bio:            "程序员，技术咨询师. 长期关注与软件开发效率有关的方方面面"
+  bio:            "程序员，技术咨询师. 长期关注与软件开发效率有关的方方面面。"
   email:          darwin_yuan@hotmail.com
   # Twitter nick for use in Twitter cards and follow button.
   #twitter: aron_bordin # if no twitter in this config, the twitter follow button will be removed
