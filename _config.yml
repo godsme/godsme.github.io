@@ -6,17 +6,17 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Travelog
-author: Your name
-author_link: https://whatever.you/like
-author_description: A few words to describe you & your face
-email: your-email@domain.com
+title: 一位老程序员的思考碎片
+author: Darwin Yuan
+author_link: https://godsme.github.com
+author_description: 程序员，技术咨询师。
+email: darwin_yuan@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://godsme.github.com" # the base hostname & protocol for your site
 
 # Picturefill
 # A responsive image polyfill: http://scottjehl.github.io/picturefill/
