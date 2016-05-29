@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "简单设计原则"
-description: "对于简单设计原则的简介"
-date:   2016-05-28 13:05:14 +0100
+date:   2016-05-28 13:05:14 
 categories: design
-location: 深圳，中国
 ---
 
 我们一直在谈**简单设计**，但究竟什么是简单设计？更具体的说，对于同一个问题，设计决策A和B，究竟哪一个更符合简单设计的要求？
@@ -73,17 +71,17 @@ design）的强调。关于这一点，有着非常有趣的部分，我们在�
 
 对于第三条也是如此，比如下面这句代码中有一个magic number：
 
-```
+{% highlight cpp %}
 a = 1000;
-```
+{% endhighlight %}
 
 为了让这段代码更容易理解，我们将代码修改为：
 
-~~~
+{% highlight cpp %}
 const int MAX_NUM_OF_CONNECTIONS = 1000;
 
 a = MAX_NUM_OF_CONNECTIONS;
-~~~
+{% endhighlight %}
 
 
 从而增加了一个新的代码元素。因而也稍微增加了设计的复杂度。但由于这个新的代码元素也产生了相对于简单更重要的价值，在简单和表达力之间，我们应该选择后者。
