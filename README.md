@@ -1,60 +1,44 @@
-# Architect theme
+Galileo Theme
+---
 
-This is a [Jekyll][1] theme that is an adaptation of [@jasonlong][2]'s [Architect theme][4] on [GitHub Pages][3].
+Another damned theme for Jekyll.
 
-This is the raw HTML and styles that are used for the *Architect* theme on [GitHub Pages](http://pages.github.com/).
+![The Galileo Theme](https://cloud.githubusercontent.com/assets/185649/11737785/b998bd0c-a002-11e5-9c93-0ac83917f32d.png)
 
-![](http://cl.ly/image/1x0Q3213330G/content)
+Landing somewhere between a scholarly publication and an adventurers notebook, the Galileo theme presents your words & photographs in a handsome, agreeable manner.
 
-# How to use it?
+It is well behaved on both mobile & desktop and radically minimal in its footprint. Charged and ready for deployment to Github Pages.
 
-Download the theme @ http://github.com/pietromenna/jekyll-architect-theme/archive/master.zip
+### In the wild
 
-Unzip it and use it as a regular jekyll folder.
+Demo [here](http://travelog.io/galileo-theme/). I'm so damned fond of this theme that I also use it on [my own blog](http://travelog.io/).
 
-```
-$ unzip master.zip
-```
+### Installation
 
-Get inside the newly extracted folder
+- Install Jekyll: `gem install jekyll`
+- [Fork this repository](https://github.com/rowanoulton/galileo-theme/fork)
+- Clone it: `git clone https://github.com/YOUR-USER/galileo-theme`
+- Run the jekyll server: `jekyll serve -w`
 
-```
-$ cd jekyll-architect-theme
-```
+Observe the results at <http://localhost:4000>.
 
-Install the dependencies
+### Customisation
 
-```
-$ bundle install
-```
+Make changes in [_config.yml](https://github.com/rowanoulton/galileo-theme/blob/master/_config.yml), ye damned heathens.
 
-Use it!
+#### A note about fonts
 
-```
-$ jekyll serve
-```
+I've employed [Typekit](https://typekit.com/) to load both "[Adobe Caslon Pro](https://typekit.com/fonts/adobe-caslon-pro)" & "[LTC Bodoni 175](https://typekit.com/fonts/ltc-bodoni-175)". To make use of these with your own Typekit account, publish a kit and enter the ID into the Jekyll config.
 
-# Setup
+This _is_ optional. If you don't want to use Typekit, well _fine_, just leave the Typekit Kit ID blank. You'll need to elect and specify substitute fonts [here](https://github.com/rowanoulton/galileo-theme/blob/master/css/screen.scss#L7) and [here](https://github.com/rowanoulton/galileo-theme/blob/master/css/screen.scss#L8).
 
-Some important configuration can be done in the file `_config.yml`. Please, check the Setup section in that file.
+### Deployment
+
+This theme is built to be deployed easily to [GitHub Pages](https://pages.github.com/).
 
 
-## baseurl
+### License
 
-`baseurl` parameter is required in the case the site doesn't sit on the root of the domain. For example: http://pietromenna.github.io/jekyll-cayman-theme
+[MIT](https://github.com/rowanoulton/galileo-theme/blob/master/LICENSE).
 
-In the case above the baseurl should be set to "/jekyll-cayman-theme".
-
-In the case the site sits in the root, you can leave `baseurl` as empty "".
-
-
-For more details read about [Jekyll][1] on its web page.
-
-# License
-
-This work is licensed under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/).
-
-[1]: http://jekyllrb.com
-[2]: https://github.com/jasonlong
-[3]: http://pages.github.com/
-[4]: http://github.com/jasonlong/architect-theme
+Do whatever you damn well please with it. I'm always glad to hear what folks are doing with it though — let me know on [Twitter](https://twitter.com/rowanoulton).
