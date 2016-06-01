@@ -82,16 +82,6 @@ const int MAX_NUM_OF_CONNECTIONS = 1000;
 a = MAX_NUM_OF_CONNECTIONS;
 ```
 
-
-``` cpp
-struct Foo
-{
-private:
-   int a;
-};
-
-```
-
 从而增加了一个新的代码元素。因而也稍微增加了设计的复杂度。但由于这个新的代码元素也产生了相对于简单更重要的价值，在简单和表达力之间，我们应该选择后者。
 
 反向价值
