@@ -149,15 +149,15 @@ readMutVar# :: MutVar# s a -> State# s -> (# State# s, a #)
 writeMutVar# :: MutVar# s a -> a -> State# s -> State# s
 ~~~
 
-这是个GHC编译器内部实现的MutVar\#，从它的名字就可以看出，这是一个Mutable Variable。而其后缀符号\#则说明，这是一个Unboxed Type。其三个主要函数用到了另外一个类型State\#，也是一个GHC编译器内部实现的Unboxed Type。
+这是个GHC编译器内部实现的`MutVar#`，从它的名字就可以看出，这是一个Mutable Variable。而其后缀符号\#则说明，这是一个Unboxed Type。其三个主要函数用到了另外一个类型`State#`，也是一个GHC编译器内部实现的Unboxed Type。
 
 ~~~haskell
 data State# s
 ~~~
 
-MutVar\#是一个类型构造器，有两个参数：a是要存储的数据类型。而s则代表是状态。从逻辑上，MutVar\#自身是一个引用，其引用的数据类型为a，而空间则从s所管理的存储上分配。如下图所示。
+`MutVar#`是一个类型构造器，有两个参数：`a`是要存储的数据类型。而`s`则代表是状态。从逻辑上，`MutVar#`自身是一个引用，其引用的数据类型为`a`，而空间则从s所管理的存储上分配。如下图所示。
 
-[[ {{ site.url }}/img/state.png | width = 10px ]]
+<img src="{{ site.url }}/img/state.png" width="600px"/>
 
 因而，我们可以写出下面的代码：
 
@@ -264,9 +264,11 @@ calc initValue = runST $ calc' initValue
 
 对于命令式语言，所有的局部变量都是在线程的栈上分配，从而修改了Stack的状态。随后所有的读写操作也都在栈上进行，不断修改Stack的状态。在一个函数处理结束后，在栈上分配的局部变量都会自动释放，关心的数据则当作函数的返回值返回。如下图所示。
 
+<img src="{{ site.url }}/img/stack.png" width="600px"/>
 
 而在ST Monad里，`runST`对应的是命令式语言的函数，而Stack对应的则是State：在计算开始时，提供一个State，计算在State上分配数据，存取State的状态，等计算结束后，State的最终状态被抛弃，返回计算结果。如下图所示。
 
+<img src="{{ site.url }}/img/st.png" width="600px"/>
 
 这样的模仿，相对于命令式语言的局部变量可变性，并未得到任何额外的好处。但很明显，命令式语言在这类问题上的处理要简洁的多。同时也说明了，允许局部变量的可修改性，对于引用透明和线程安全没有任何影响，只会带来简洁和性能。
 

@@ -183,6 +183,20 @@ img {
   border: 0;
 }
 
+img{
+
+    //border:1px solid #cacaca;
+
+    padding:2px;
+
+    max-width:600px;
+
+    width:expression(this.offsetWidth > 600 ? "600px" : "auto");
+
+    display:inline !important;
+
+}
+
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
