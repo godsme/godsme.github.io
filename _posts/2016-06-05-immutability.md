@@ -157,7 +157,7 @@ data State# s
 
 MutVar\#是一个类型构造器，有两个参数：a是要存储的数据类型。而s则代表是状态。从逻辑上，MutVar\#自身是一个引用，其引用的数据类型为a，而空间则从s所管理的存储上分配。如下图所示。
 
-[[ {{ site.url }}/img/state.png | width = 100px ]]
+[[ {{ site.url }}/img/state.png | width = 10px ]]
 
 因而，我们可以写出下面的代码：
 
