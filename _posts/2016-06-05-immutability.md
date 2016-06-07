@@ -328,29 +328,25 @@ struct Foo
 
 下面我们来看看为何Rank 2 Type可以解决runST状态泄漏的问题。我们先来推导一下表达式`runST $ newSTRef 10`的类型：
 
-$$\begin{align}
-& \mathit{runST::(\forall s. ST\ \ s\ \ a)\ \rightarrow \ a}\\
-& \mathit{newSTRef\ \ 10 ::
-\forall s.\ ST\ \ s\ \ (STRef\ \ s\ \ Int)}\\
-& \mathit{[STRef\ \ s\ \ Int \sim a]}
-\end{align}
-$$
+~~~ haskell
+runST :: (forall s. ST s a) -> a
+newSTRef 10 :: forall s. ST s (STRef s Int)
+[STRef s Int ~ a]
+~~~
 
 因而，
 
-$$
-\begin{align}
-runST\ \$\ newSTRef\ \ 10 :: (\forall s.\ \ ST\ s\ \ (STRef\ \ s\ \ Int))\ \rightarrow\ \ STRef\ \ s\ \ Int
-\end{align}
-$$
+~~~ haskell
+runST $ newSTRef 10 :: (forall s. ST s (STRef s Int)) -> STRef s Int
+~~~
 
 其中，`s`已经出现在\\(\forall s\\)的限定范围之外，因而编译器将不会通过编译。
 
-但是，如果runST的类型为\\(runST :: \forall s. ST\ \ s\ \ a\ \ \rightarrow\ a\\)，上述类型则变为：
+但是，如果runST的类型为`forall s. ST s a -> a`，上述类型则变为：
 
-$$runST\ \$\ newSTRef\
-\ 10 :: \forall s.
-ST\ \ s\ \ (STRef\ \ s\ \ Int)\ \rightarrow\ STRef\ \ s\ \ Int$$。
+~~~ haskell
+runST $ newSTRef 10 :: forall s. ST s (STRef s Int) -> STRef s Int
+~~~
 
 在这个类型里，两个`s`都在同一个限定符的作用范围内，因而它能够通过编译。
 
