@@ -1,7 +1,8 @@
 ---
-layout: post
-title: "简单设计原则"
-date:   2016-05-28 13:05:14 
+layout: post_layout
+title: 简单设计原则
+date: 2016-05-28 13:05:14 
+time: 2016年05月28日 星期日
 categories: software design
 location: 深圳,中国
 ---

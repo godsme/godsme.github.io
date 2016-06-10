@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "不可变性的代价"
-date:   2016-06-05 22:14:14
+title: "Immutability: The Dark Side"
+date: 2016-06-05 22:14:14
+time: 2016年06月05日 星期日
 categories: fp haskell
 location: 深圳,中国
 ---

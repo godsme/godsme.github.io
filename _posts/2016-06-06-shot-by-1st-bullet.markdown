@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "第一颗子弹"
-date:   2016-06-05 19:39:14
+date:   2016-06-06 19:39:14
+time: 2016年06月06日 星期一
 categories: software design
 location: 深圳,中国
 ---
