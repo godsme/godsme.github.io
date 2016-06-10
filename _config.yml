@@ -1,43 +1,31 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: 
-author: 袁英杰
-author_link: https://godsme.github.io
-author_description: 程序员，技术咨询师。长期关注与软件开发效率的方方面面。
-email: darwin_yuan@hotmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://godsme.github.io" # the base hostname & protocol for your site
-
-# Picturefill
-# A responsive image polyfill: http://scottjehl.github.io/picturefill/
-picturefill: false
-
-# Typography
-# To use, publish a kit and enter the ID here. If you do not wish to use Typekit,
-# leave this ID blank
-typekit_kit_id: kwf5dox
+title: 袁英杰
+description: Darwin Yuan
+favicon: /assets/img/banner.png
+baseurl:
+url: https://godsme.github.io
+rss_url:
 
 # Build settings
-gems: [jekyll-paginate]
+
+highlight: true
+#highlighter: rouge
+
+timezone: Asia/Shanghai
+
 markdown: kramdown
-permalink: pretty
-
 kramdown:
-  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
-# Pagination
-paginate: 5
-
-# Sass
-sass:
-    style: :compressed
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style

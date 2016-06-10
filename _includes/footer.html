@@ -1,4 +1,13 @@
-<footer id="footer">
-    <p>作者: <strong><a href="{{ site.author_link }}" target="_blank">{{ site.author }}</a></strong></p>
-    <p class="legal">{{ site.author_description }}</p>
-</footer>
+<div class="footer-copyright">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                Copyright &copy; 2016 {{ site.data.author.name }} - All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+{% include googleanalytics.html %}
